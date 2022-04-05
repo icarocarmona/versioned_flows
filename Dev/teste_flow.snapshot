@@ -82,6 +82,36 @@
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "b48dc841-7476-3aac-88ca-04559a0131a8",
+          "identifier" : "40e3efc3-ae6f-3973-8ded-65a9b7f67aca",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "b48dc841-7476-3aac-88ca-04559a0131a8",
+            "id" : "9114aa0f-011c-325c-aab1-017248b46fce",
+            "name" : "ListS3",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "b48dc841-7476-3aac-88ca-04559a0131a8",
+            "id" : "353d0bc3-c41a-32c7-923c-fce31d61133e",
+            "name" : "Funnel",
+            "type" : "FUNNEL"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "b48dc841-7476-3aac-88ca-04559a0131a8",
           "identifier" : "8e93d657-2c25-31d7-bd28-6f6ba967c450",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -240,6 +270,185 @@
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.LogMessage",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-aws-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.10.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "PRIMARY",
+          "groupIdentifier" : "b48dc841-7476-3aac-88ca-04559a0131a8",
+          "identifier" : "9114aa0f-011c-325c-aab1-017248b46fce",
+          "name" : "ListS3",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 792.0,
+            "y" : -8.0
+          },
+          "properties" : {
+            "write-s3-user-metadata" : "false",
+            "list-type" : "1",
+            "requester-pays" : "false",
+            "write-s3-object-tags" : "false",
+            "Signer Override" : "Default Signature",
+            "Bucket" : "teste",
+            "Communications Timeout" : "30 secs",
+            "Region" : "us-west-2",
+            "min-age" : "0 sec",
+            "use-versions" : "false"
+          },
+          "propertyDescriptors" : {
+            "write-s3-user-metadata" : {
+              "displayName" : "Write User Metadata",
+              "identifiesControllerService" : false,
+              "name" : "write-s3-user-metadata",
+              "sensitive" : false
+            },
+            "Proxy Host" : {
+              "displayName" : "Proxy Host",
+              "identifiesControllerService" : false,
+              "name" : "Proxy Host",
+              "sensitive" : false
+            },
+            "list-type" : {
+              "displayName" : "List Type",
+              "identifiesControllerService" : false,
+              "name" : "list-type",
+              "sensitive" : false
+            },
+            "Access Key" : {
+              "displayName" : "Access Key ID",
+              "identifiesControllerService" : false,
+              "name" : "Access Key",
+              "sensitive" : true
+            },
+            "prefix" : {
+              "displayName" : "Prefix",
+              "identifiesControllerService" : false,
+              "name" : "prefix",
+              "sensitive" : false
+            },
+            "proxy-configuration-service" : {
+              "displayName" : "Proxy Configuration Service",
+              "identifiesControllerService" : true,
+              "name" : "proxy-configuration-service",
+              "sensitive" : false
+            },
+            "Endpoint Override URL" : {
+              "displayName" : "Endpoint Override URL",
+              "identifiesControllerService" : false,
+              "name" : "Endpoint Override URL",
+              "sensitive" : false
+            },
+            "requester-pays" : {
+              "displayName" : "Requester Pays",
+              "identifiesControllerService" : false,
+              "name" : "requester-pays",
+              "sensitive" : false
+            },
+            "AWS Credentials Provider service" : {
+              "displayName" : "AWS Credentials Provider service",
+              "identifiesControllerService" : true,
+              "name" : "AWS Credentials Provider service",
+              "sensitive" : false
+            },
+            "SSL Context Service" : {
+              "displayName" : "SSL Context Service",
+              "identifiesControllerService" : true,
+              "name" : "SSL Context Service",
+              "sensitive" : false
+            },
+            "write-s3-object-tags" : {
+              "displayName" : "Write Object Tags",
+              "identifiesControllerService" : false,
+              "name" : "write-s3-object-tags",
+              "sensitive" : false
+            },
+            "Signer Override" : {
+              "displayName" : "Signer Override",
+              "identifiesControllerService" : false,
+              "name" : "Signer Override",
+              "sensitive" : false
+            },
+            "Bucket" : {
+              "displayName" : "Bucket",
+              "identifiesControllerService" : false,
+              "name" : "Bucket",
+              "sensitive" : false
+            },
+            "delimiter" : {
+              "displayName" : "Delimiter",
+              "identifiesControllerService" : false,
+              "name" : "delimiter",
+              "sensitive" : false
+            },
+            "proxy-user-password" : {
+              "displayName" : "Proxy Password",
+              "identifiesControllerService" : false,
+              "name" : "proxy-user-password",
+              "sensitive" : true
+            },
+            "Communications Timeout" : {
+              "displayName" : "Communications Timeout",
+              "identifiesControllerService" : false,
+              "name" : "Communications Timeout",
+              "sensitive" : false
+            },
+            "Region" : {
+              "displayName" : "Region",
+              "identifiesControllerService" : false,
+              "name" : "Region",
+              "sensitive" : false
+            },
+            "Secret Key" : {
+              "displayName" : "Secret Access Key",
+              "identifiesControllerService" : false,
+              "name" : "Secret Key",
+              "sensitive" : true
+            },
+            "Credentials File" : {
+              "displayName" : "Credentials File",
+              "identifiesControllerService" : false,
+              "name" : "Credentials File",
+              "sensitive" : false
+            },
+            "proxy-user-name" : {
+              "displayName" : "Proxy Username",
+              "identifiesControllerService" : false,
+              "name" : "proxy-user-name",
+              "sensitive" : false
+            },
+            "min-age" : {
+              "displayName" : "Minimum Object Age",
+              "identifiesControllerService" : false,
+              "name" : "min-age",
+              "sensitive" : false
+            },
+            "Proxy Host Port" : {
+              "displayName" : "Proxy Host Port",
+              "identifiesControllerService" : false,
+              "name" : "Proxy Host Port",
+              "sensitive" : false
+            },
+            "use-versions" : {
+              "displayName" : "Use Versions",
+              "identifiesControllerService" : false,
+              "name" : "use-versions",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.aws.s3.ListS3",
           "yieldDuration" : "1 sec"
         } ],
         "remoteProcessGroups" : [ ],
