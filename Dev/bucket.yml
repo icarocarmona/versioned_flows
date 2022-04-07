@@ -1,4 +1,7 @@
 flows:
+  01e53357-e0b7-4447-acb9-7c41d969d0e9: {ver: 1, file: dev-pipeline.snapshot, comments: '',
+    author: anonymous, created: 1649355367108, flowName: dev-pipeline, flowDesc: demo
+      pipe teste}
   13d13571-9f16-4828-ae7d-3f19467706fb: {ver: 2, file: teste_flow.snapshot, comments: teste
       de segurança, author: anonymous, created: 1649193411192, flowName: teste flow,
     flowDesc: ''}
